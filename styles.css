@@ -1,7 +1,6 @@
 /* CSS Reset : BEGIN */
 /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-        
 html, body {
     margin: 0 auto !important;
     padding: 0 !important;
@@ -99,8 +98,7 @@ img.g-img + div {
 /* CSS Reset : END */
 
 /* Progressive Enhancements : BEGIN */
-
-	    .primary{
+	.primary{
 	background: #17bebb;
 }
 .bg_white{
@@ -172,11 +170,10 @@ a{
 }
 
 /*LOGO*/
-
 .logo h1{
 	margin: 0;
 }
-.logo a{
+.logo h1 a{
 	color: #17bebb;
 	font-size: 24px;
 	font-weight: 700;
@@ -206,7 +203,6 @@ a{
 	font-weight: 600;
 	color: #000;
 }
-
 
 /*PRODUCT*/
 .product-entry{
@@ -239,7 +235,6 @@ ul.social li{
 }
 
 /*FOOTER*/
-
 .footer{
 	border-top: 1px solid rgba(0,0,0,.05);
 	color: rgba(0,0,0,.5);
@@ -260,6 +255,7 @@ ul.social li{
 	color: rgba(0,0,0,1);
 }
 
+/* transfer inline-styles*/
 body {
   width: 100%;
   margin: 0;
