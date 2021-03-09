@@ -78,7 +78,7 @@ body {
   background-image: url('../img/Image.png');
 }
 
-.content_card {
+.content__card {
   display: flex;
   margin: 0 30px 40px 0;
 }
