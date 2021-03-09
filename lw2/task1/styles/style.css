@@ -1,0 +1,148 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+
+/*content descr start*/
+
+.content {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.content__descr {
+  margin: 0 auto;
+  width: 652px;
+  padding: 80px 0;
+}
+
+.content__descr_title {
+  width: 100%;
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 88px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.content__descr_title:first-child {
+  padding-left: 16px;
+}
+
+.content__descr_title-programs {
+  position: relative;
+  padding: 0 16px;
+  margin-left: 16px;
+  z-index: 1;
+}
+
+.content__descr_title-programs::after {
+  content: '';
+  width: 100%;
+  height: 12px;
+  background-color: #EC6041;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.content__descr_text {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+/*content descr end*/
+
+
+/*content cards start*/
+
+.content__cards {
+  width: 100%;
+  margin: 0 68px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content__card_pic {
+  width: 208px;
+  height: 208px;
+  background-image: url('../img/Image.png');
+}
+
+.content_card {
+  display: flex;
+  margin: 0 30px 40px 0;
+}
+
+.content__card_text {
+  margin-left: 24px;
+  max-width: 388px;
+}
+
+.content__card_title {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.content__card_descr {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.content__card_button {
+  width: 144px;
+  height: 36px;
+  border: 0;
+  outline: none;
+  background-color: #EC6041;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px #F1876F, 8px 8px 0px #F5AE9E;
+  letter-spacing: 0.04em;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.content__card_button:hover {
+  background-color: #f04018;
+}
+
+.content__card_button span {
+  padding: 8px 12px;
+  height: inherit;
+}
+
+
+/*content cards end*/
+
+
+/*Dark theme start*/
+
+.content-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.content_text-dark {
+  opacity: .80;
+}
+
+.content_pic-dark {
+  background-image: url('../img/Image-dark.png')
+}
+
+/*Dark theme end*/
