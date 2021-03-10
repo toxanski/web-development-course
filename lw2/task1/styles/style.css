@@ -10,6 +10,20 @@ body {
 }
 
 
+/*Dark theme start*/
+
+.content-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.content-dark p {
+  opacity: .80;
+}
+
+/*Dark theme end*/
+
+
 /*content descr start*/
 
 .content {
@@ -75,8 +89,7 @@ body {
 .content__card_pic {
   width: 208px;
   height: 208px;
-  background-image: url('../img/Image.png');
-}
+} 
 
 .content__card {
   display: flex;
@@ -128,21 +141,3 @@ body {
 
 
 /*content cards end*/
-
-
-/*Dark theme start*/
-
-.content-dark {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.content_text-dark {
-  opacity: .80;
-}
-
-.content_pic-dark {
-  background-image: url('../img/Image-dark.png')
-}
-
-/*Dark theme end*/
