@@ -1,24 +1,29 @@
 .button {
   outline: none;
-  border: 0;
+  border: 3px solid #818181;
   margin: 10px;
   color: white;
   font-family: sans-serif;
   font-weight: 500;
+  background-color: #ffffff;
 }
 
-.button-semiround {
+.button.button-semirounded {
   border-radius: 6px;
 }
 
-.button-round {
+.button.button-rounded {
   border-radius: 30px;
+}
+
+.button.button-filled {
+  background-color: #818181;
 }
 
 
 /*buttons-Xlarge*/
 
-.button-xlarge {
+/* /.button.button-large {
   width: 200px;
   height: 70px;
   font-size: 18px;
@@ -43,7 +48,7 @@
   height: 60px;
   font-size: 17px;
   background-color: #9975AB;
-}
+} */
 
 .button-large-primary:nth-child(odd) {
   background-color: #ffffff;
