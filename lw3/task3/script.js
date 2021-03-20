@@ -4,101 +4,101 @@ var MusicPlayer = {
     'song2.mp3',
     'song3.mp3',
   ],
-	
-	count: 0,
-	currentTrack: function() {
-		return this.trackList[this.count];
-	},
+
+  count: 0,
+  currentTrack: function () {
+    return this.trackList[this.count];
+  },
 
   status: 'pause',
 
-  display: function() {
-		return 'Track: ' + this.currentTrack() + ', ' + ' Status: ' + this.status  + ', '  + ' Time: ' + this.currentTime;
+  display: function () {
+    return 'Track: ' + this.currentTrack() + ', ' + ' Status: ' + this.status + ', ' + ' Time: ' + this.currentTime;
   },
 
-  play: function() {
+  play: function () {
     this.status = 'play';
-		this.startTime();
-		return 'play track';
+    this.startTime();
+    return 'play track';
   },
 
-  pause: function() {
+  pause: function () {
     this.status = 'pause';
-		this.stopTime();
-		return 'stop track';
+    this.stopTime();
+    return 'stop track';
   },
 
-  next: function() {
-		this.count++;
-		if (this.count === this.trackList.length) {
-			this.count = 0;
-		}
-		this.currentTrack(this.count);
-		this.restartTime();
-		return 'next track ...'
-	},
-
-  prev: function() {
-		this.count--;
-		if (this.count === -1) {
-			this.count = this.trackList.length - 1;
-		}
-		this.currentTrack(this.count);
-		this.restartTime();
-		return '... previous track';
+  next: function () {
+    this.count++;
+    if (this.count === this.trackList.length) {
+      this.count = 0;
+    }
+    this.currentTrack(this.count);
+    this.restartTime();
+    return 'next track ...'
   },
 
-  showTracks: function() {
-		var t = this;
-		this.trackList.forEach(function (item, i) {
-			if (item === t.currentTrack()) {
-				console.log(`${i + 1}. ${item} - играет сейчас, Time: ${t.currentTime}`); 
-			} else {
-				console.log(`${i + 1}. ${item}`);
-			}
-		});
+  prev: function () {
+    this.count--;
+    if (this.count === -1) {
+      this.count = this.trackList.length - 1;
+    }
+    this.currentTrack(this.count);
+    this.restartTime();
+    return '... previous track';
   },
 
-	seconds: 0,
-	minute: 0,
-	currentTime: 0,
-	interval: 0,
+  showTracks: function () {
+    var t = this;
+    this.trackList.forEach(function (item, i) {
+      if (item === t.currentTrack()) {
+        console.log(`${i + 1}. ${item} - играет сейчас, Time: ${t.currentTime}`);
+      } else {
+        console.log(`${i + 1}. ${item}`);
+      }
+    });
+  },
 
-	startTime: function() {
+  seconds: 0,
+  minute: 0,
+  currentTime: 0,
+  interval: 0,
 
-		interval = setInterval(() => {
-			if (this.minute === 0 ) {
-				this.minute = '0' + this.minute
-			}
+  startTime: function () {
 
-			this.seconds++;
+    interval = setInterval(() => {
+      if (this.minute === 0) {
+        this.minute = '0' + this.minute
+      }
 
-			if (this.seconds === 60 ) {
-				this.minute++;
-				this.seconds = 0;
+      this.seconds++;
 
-				(this.minute < 10) ? this.minute = '0' + this.minute: this.minute;
-			}
-			(this.seconds < 10) ? this.seconds = '0' + this.seconds: this.seconds; 
-			this.currentTime = `${this.minute}:${this.seconds}`;
-		}, 1000);
-	},
+      if (this.seconds === 60) {
+        this.minute++;
+        this.seconds = 0;
 
-	stopTime: function() {
-		setTimeout(function() {
-			clearInterval(this.interval);
-		});
-	},
+        (this.minute < 10) ? this.minute = '0' + this.minute: this.minute;
+      }
+      (this.seconds < 10) ? this.seconds = '0' + this.seconds: this.seconds;
+      this.currentTime = `${this.minute}:${this.seconds}`;
+    }, 1000);
+  },
 
-	restartTime: function() {
-		this.seconds = 0;
-		this.minute = 0;
-	}
+  stopTime: function () {
+    setTimeout(function () {
+      clearInterval(this.interval);
+    });
+  },
+
+  restartTime: function () {
+    this.seconds = 0;
+    this.minute = 0;
+  }
 };
 // MusicPlayer.display(); // "Track: song1.mp3, Status: pause"
 // MusicPlayer.play();
 // MusicPlayer.display(); // "Track: song1.mp3, Status: play"
- 
+
 // MusicPlayer.display(); // "Track: song2.mp3, Status: play"
 // // MusicPlayer.check();
 // // document.body.innerHTML = MusicPlayer.time();
