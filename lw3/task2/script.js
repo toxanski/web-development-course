@@ -18,5 +18,5 @@ var isTimeRangesIntersect = function (timeRange1, timeRange2) {
     console.log('false (Введите два массива!)');
   }
 }
-isTimeRangesIntersect(['08:30', '11:30'], ['10:30', '12:00']); // return false
+isTimeRangesIntersect(['08:30', '09:30'], ['10:30', '12:00']); // return false
 isTimeRangesIntersect(['18:30', '19:30'], ['19:00', '21:00']); // return true
