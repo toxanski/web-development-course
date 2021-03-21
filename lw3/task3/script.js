@@ -33,7 +33,7 @@ var MusicPlayer = {
     if (this.count === this.trackList.length) {
       this.count = 0;
     }
-    this.currentTrack(this.count);
+    // this.currentTrack(this.count);
     this.restartTime();
     return 'next track ...'
   },
@@ -43,7 +43,7 @@ var MusicPlayer = {
     if (this.count === -1) {
       this.count = this.trackList.length - 1;
     }
-    this.currentTrack(this.count);
+    // this.currentTrack(this.count);
     this.restartTime();
     return '... previous track';
   },
