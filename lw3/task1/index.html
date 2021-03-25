@@ -9,110 +9,106 @@
   </head>
   <body>
     <main class="main">
-
       <div class="wrapper-full">
-        <h1 class="main__title">My Shopping Cart</h1>
-
-        <div class="main__content">
+        <h1 class="title-main">My Shopping Cart</h1>
+        <div class="content">
           <div class="wrapper">
-
-            <div class="main__content_add">
-              <div class="add_headers">
-                <p class="add_descr_title add_title">Description</p>
-                <p class="add_size_title add_title">Size</p>
-                <p class="add_quantity_title add_title">Quantity</p>
-                <p class="add_remove_title add_title">Remove</p>
-                <p class="add_price_title add_title">Price</p>
+            <div class="products">
+              <div class="headers">
+                <p class="headers__description headers__title">Description</p>
+                <p class="headers__size headers__title">Size</p>
+                <p class="headers__quantity headers__title">Quantity</p>
+                <p class="headers__remove headers__title">Remove</p>
+                <p class="headers__price headers__title">Price</p>
               </div>
               <!--first block-->
-              <div class="add_content">
-                <div class="add_block add_descr">
-                  <img src="img/man.jpeg" alt="men" class="add_image">
-                  <div class="add_descr_text">
+              <div class="product">
+                <div class="product__item product__description">
+                  <img src="img/man.jpeg" alt="men" class="product__image">
+                  <div class="product__text">
                     <h2>Streamline Leggings</h2>
                     <p>Product Code: MLSB</p>
                   </div>
                 </div>
-                <div class="add_block add_size">
-                  <div class="border-icon"><span class="add_size">S</span></div>
+                <div class="product__item product__size">
+                  <div class="border-icon"><span>S</span></div>
                 </div>
-                <div class="add_block add_quantity">
-                  <div class="quantity-minus border-icon"><span class="add_quantity-minus">+</span></div>
-                  <div class="quantity-current border-icon"><span class="add_quantity-current">1</span></div>
-                  <div class="quantity-plus border-icon"><span class="add_quantity-plus">-</span></div>
+                <div class="product__item product__quantity">
+                  <div class="product__quantity--minus border-icon minus"><span>+</span></div>
+                  <div class="product__quantity--current border-icon"><span>1</span></div>
+                  <div class="product__quantity--plus border-icon"><span>-</span></div>
                 </div>
-                <div class="add_block add_remove">
-                  <div class="border-icon"><img src="img/close.svg" alt="" class="remove_img"></div>
+                <div class="product__item product__remove">
+                  <div class="border-icon"><img src="img/close.svg" alt="" class="product__image-close"></div>
                 </div>
-                <div class="add_block add_price">
-                  <p class="add_price">&#163;55</p>
+                <div class="product__item product__price">
+                  <p>&#163;55</p>
                 </div>
               </div>
               <!--second block-->
-              <div class="add_content">
-                <div class="add_block add_descr">
-                  <img src="img/woman.jpg" alt="men" class="add_image">
-                  <div class="add_descr_text">
+              <div class="product">
+                <div class="product__item product__description">
+                  <img src="img/woman.jpg" alt="men" class="product__image">
+                  <div class="product__text">
                     <h2>Streamline Sports Bra</h2>
                     <p>Product Code: MLSB</p>
                   </div>
                 </div>
-                <div class="add_block add_size">
-                  <div class="border-icon"><span class="add_size">S</span></div>
+                <div class="product__item product__size">
+                  <div class="border-icon"><span>S</span></div>
                 </div>
-                <div class="add_block add_quantity">
-                  <div class="quantity-minus border-icon"><span class="add_quantity-minus">+</span></div>
-                  <div class="quantity-current border-icon"><span class="add_quantity-current">1</span></div>
-                  <div class="quantity-plus border-icon"><span class="add_quantity-plus">-</span></div>
+                <div class="product__item product__quantity">
+                  <div class="product__quantity--minus border-icon minus"><span>+</span></div>
+                  <div class="product__quantity--current border-icon"><span>1</span></div>
+                  <div class="product__quantity--plus border-icon"><span>-</span></div>
                 </div>
-                <div class="add_block add_remove">
-                  <div class="border-icon"><img src="img/close.svg" alt="" class="remove_img"></div>
+                <div class="product__item add_remove">
+                  <div class="border-icon"><img src="img/close.svg" alt="" class="product__image-close"></div>
                 </div>
-                <div class="add_block add_price">
-                  <p class="add_price">&#163;55</p>
+                <div class="product__item product__price">
+                  <p>&#163;55</p>
                 </div>
               </div>
             </div>
-						<!--calculation-->
-            <div class="main__content_calc">
-              <div class="main__content_calc_cart">
-                <p class="main__content_calc_title">Discount</p>
-                <p class="main__content_calc_price">£0.00</p>
+            <!--calculation-->
+            <div class="calculation">
+              <div class="calculation__container">
+                <p class="calculation__title">Discount</p>
+                <p class="calculation__price">£0.00</p>
               </div>
-              <div class="main__content_calc_cart">
-                <p class="main__content_calc_title">Delivery</p>
-                <p class="main__content_calc_price">£0.00</p>
+              <div class="calculation__container">
+                <p class="calculation__title">Delivery</p>
+                <p class="calculation__price">£0.00</p>
               </div>
-              <div class="main__content_calc_cart">
-                <p class="main__content_calc_title">Subtotal</p>
-                <p class="main__content_calc_price">£110.00</p>
+              <div class="calculation__container">
+                <p class="calculation__title">Subtotal</p>
+                <p class="calculation__price">£110.00</p>
               </div>
-              <div class="main__content_calc_cart">
-                <p class="main__content_calc_title">Total</p>
-                <p class="main__content_calc_price">£110.00</p>
+              <div class="calculation__container">
+                <p class="calculation__title">Total</p>
+                <p class="calculation__price">£110.00</p>
               </div>
             </div>
-						<!--checkout-->
-            <div class="main__content_check">
-              <div class="main__content_check_promo">
-                <span class="main__content_check_promo_title">
+            <!--checkout-->
+            <div class="footer-content">
+              <div class="footer-content__promo">
+                <span class="footer-content__title">
                 If you have promotion code, please enter it here:
                 </span>
-                <input type="text" class="main__content_check_promo_input" placeholder="Please, enter promo code">
-                <input type="button" value="Apply Discount" class="main__content_check_promo_button promo_button">
+                <input type="text" class="footer-content__input" placeholder="Please, enter promo code">
+                <input type="button" value="Apply Discount" class="footer-content__button button-footer">
               </div>
-              <div class="main__content_check_shopping">
-                <button class="main__content_check_shopping_checkout shopping_promo_button promo_button">
+              <div class="footer-content__shopping">
+                <button class="footer-content__checkout shopping_button button-footer">
                   <span>Checkout</span>
-                  <div class="checkout_img">
-                    <img src="img/shopping-cart-small.svg" alt="cart" class="checkout_img_thumb">
+                  <div class="footer-content__cart">
+                    <img src="img/shopping-cart-small.svg" alt="cart" class="footer-content__img">
                   </div>
                 </button>
-                <button class="main__content_check_shopping_update shopping_promo_button promo_button promo_button-white">Update Quantity</button>
-                <button class="main__content_check_shopping_continue shopping_promo_button promo_button promo_button-white">Continue Shopping</button>
+                <button class="footer-content__update shopping_button button-footer button-footer--white">Update Quantity</button>
+                <button class="footer-content__continue shopping_button button-footer button-footer--white">Continue Shopping</button>
               </div>
             </div>
-						
           </div>
         </div>
       </div>

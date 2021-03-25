@@ -5,9 +5,15 @@ var MusicPlayer = {
     'song3.mp3',
   ],
 
-  count: 0,
+  trackTime: [
+    '00:33',
+    '01:00',
+    '00:42'
+  ],
+
+  trackIndex: 0,
   currentTrack: function () {
-    return this.trackList[this.count];
+    return this.trackList[this.trackIndex];
   },
 
   status: 'pause',
@@ -29,9 +35,9 @@ var MusicPlayer = {
   },
 
   next: function () {
-    this.count++;
-    if (this.count === this.trackList.length) {
-      this.count = 0;
+    this.trackIndex++;
+    if (this.trackIndex === this.trackList.length) {
+      this.trackIndex = 0;
     }
     // this.currentTrack(this.count);
     this.restartTime();
@@ -39,9 +45,9 @@ var MusicPlayer = {
   },
 
   prev: function () {
-    this.count--;
-    if (this.count === -1) {
-      this.count = this.trackList.length - 1;
+    this.trackIndex--;
+    if (this.trackIndex === -1) {
+      this.trackIndex = this.trackList.length - 1;
     }
     // this.currentTrack(this.count);
     this.restartTime();
@@ -49,10 +55,10 @@ var MusicPlayer = {
   },
 
   showTracks: function () {
-    var t = this;
+    var thisObject = this;
     this.trackList.forEach(function (item, i) {
-      if (item === t.currentTrack()) {
-        console.log(`${i + 1}. ${item} - играет сейчас, Time: ${t.currentTime}`);
+      if (item === thisObject.currentTrack()) {
+        console.log(`${i + 1}. ${item} - играет сейчас, Time: ${thisObject.currentTime}`);
       } else {
         console.log(`${i + 1}. ${item}`);
       }
@@ -65,8 +71,9 @@ var MusicPlayer = {
   interval: 0,
 
   startTime: function () {
-
-    interval = setInterval(() => {
+    var thisObject = this;
+    this.interval = setInterval(() => {
+      thisObject.timeIsOver();
       if (this.minute === 0) {
         this.minute = '0' + this.minute
       }
@@ -84,9 +91,16 @@ var MusicPlayer = {
     }, 1000);
   },
 
+  timeIsOver: function () {
+    if (this.currentTime === this.trackTime[this.trackIndex]) {
+      this.next();
+    }
+  },
+
   stopTime: function () {
+    var thisObject = this;
     setTimeout(function () {
-      clearInterval(this.interval);
+      clearInterval(thisObject.interval);
     });
   },
 
