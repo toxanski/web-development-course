@@ -1,7 +1,8 @@
 function isTimeRangesIntersect(timeRange1, timeRange2) {
   if (!Array.isArray(timeRange1) || !Array.isArray(timeRange2)) {
     return false;
-  } else if (timeRange1[0][2] !== ":" || timeRange1[1][2] !== ":" || timeRange2[0][2] !== ":" || timeRange2[1][2] !== ":") {
+  }
+  else if (timeRange1[0][2] !== ":" || timeRange1[1][2] !== ":" || timeRange2[0][2] !== ":" || timeRange2[1][2] !== ":") {
     return false;
   } else {
     var arr = timeRange1.concat(timeRange2);

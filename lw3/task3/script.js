@@ -91,7 +91,7 @@ var MusicPlayer = {
     }, 1000);
   },
 
-  timeIsOver: function () {
+  timeIsOver: function() {
     if (this.currentTime === this.trackTime[this.trackIndex]) {
       this.next();
     }

@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9b58c;
+  font-family: 'Tahoma';
+  font-weight: 500;
+}
+
+.todo-list {
+  background-color: #fff;
+  width: 450px;
+  margin: 0 auto;
+  box-shadow: 20px 20px 20px rgba(75, 75, 75, 0.404);
+}
+
+/*Date*/
+.todo-list_date {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  padding-top: 28px;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.todo-list_day {
+  color: #7384ff;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.todo-list_month {
+  color: #b8c0ff;
+}
+
+/*case*/
+.todo-list_tasks {
+  padding: 10px 0;
+  width: 100%;
+  min-height: 380px;
+}
+
+.todo-list_item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 30px;
+  transition: all .2s ease-in-out;
+}
+
+.todo-list_item:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.todo-list_checkbox {
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  transition: all .2s ease;
+}
+
+.todo-list_name {
+  flex-grow: 1;
+  padding-left: 30px;
+  color: #8492ff;
+  font-size: 18px;
+}
+
+.todo-list_time {
+  color: #d5daff;
+}
+
+/*footer*/
+
+.todo-list_footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  border-top: 1px solid rgb(218, 218, 218);
+}
+
+.todo-list_total {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  color: #aeb6fd;
+}
+
+.todo-list_add-button {
+  padding: 20px 20px 20px 20px;
+  color: #697afd;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.todo-list_add-button:hover, .todo-list_add-button:hover:active, .todo-list_add-button:hover:focus {
+  background-color: rgb(216, 216, 216);
+}
+
+.todo-list_name--checked {
+  color: rgb(203, 209, 250);
+  text-decoration: line-through;
+}
