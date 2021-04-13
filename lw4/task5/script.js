@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+var Cashbox = {
+=======
 var cashbox = {
+>>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   amount: 0,
   operationHistory: [],
   addPayment: function(payment) {

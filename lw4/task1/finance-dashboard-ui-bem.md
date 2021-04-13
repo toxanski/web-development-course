@@ -1,5 +1,66 @@
 ```
   .header
+    .header__logo
+    .header__text
+      .header__title
+      .header__subtitle	
+    .header__notification
+    .header__account
+      .header__avatar
+      .header__name
+      .header__collapse
+  .content
+    .sidebar
+      .sidebar__dashboard
+      .sidebar__accounts
+      .sidebar__mobile
+      .sidebar__payment
+      .sidebar__complaints
+      .sidebar__supports
+    .content__section
+      .profile
+        .profile__photo
+        .profile__info
+          .profile__title
+          .profile__text
+        .profile-form
+          .profile-form__name
+          .profile-form__number-phone
+          .profile-form__email
+          .profile-form__sms--active
+          .profile-form__button
+      .account
+         .account__header
+           .account__title
+           .account__search
+           .account__edit
+         .account_content
+           .account__active
+             .account__active-title
+             .account__active-number
+             .account__active-button
+           .account__blocked
+             .account__blocked-title
+             .account__blocked-number
+             .account__blocked-button
+      .bills
+         .bills__header
+           .bills__title
+           .bills__filter
+         .bills__content
+           .bills__phone
+             .bills__name
+             .bills__button--active
+           .bills__internet
+             .bills__name
+             .bills__button
+           .bills__house
+             .bills__name
+             .bills__button--active
+           .bills__incame
+             .bills__name
+             .bills__button--active
+=======
     .header_logo
     .header_title
     .header_welcome
