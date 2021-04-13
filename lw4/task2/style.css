@@ -13,19 +13,13 @@ body {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 .container {
-=======
-.todo-list {
-  background-color: #fff;
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   width: 450px;
   margin: 0 auto;
   box-shadow: 20px 20px 20px rgba(75, 75, 75, 0.404);
 }
 
 /*Date*/
-<<<<<<< HEAD
 .date-header {
   width: 450px;
   height: 80px;
@@ -37,17 +31,6 @@ body {
 }
 
 .date-header__info {
-=======
-.todo-list_date {
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  padding-top: 28px;
-  border-bottom: 1px solid rgb(218, 218, 218);
-}
-
-.todo-list_day {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   color: #7384ff;
   font-weight: 700;
   font-size: 20px;
@@ -55,7 +38,6 @@ body {
   letter-spacing: 2px;
 }
 
-<<<<<<< HEAD
 .arrows {
   font-size: 20px;
   font-weight: bold;
@@ -77,20 +59,6 @@ body {
 }
 
 .todo-list-item {
-=======
-.todo-list_month {
-  color: #b8c0ff;
-}
-
-/*case*/
-.todo-list_tasks {
-  padding: 10px 0;
-  width: 100%;
-  min-height: 380px;
-}
-
-.todo-list_item {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   width: 100%;
   height: 50px;
   display: flex;
@@ -101,19 +69,11 @@ body {
   transition: all .2s ease-in-out;
 }
 
-<<<<<<< HEAD
 .todo-list-item:hover {
   background-color: rgb(216, 216, 216);
 }
 
 .todo-list-item__checkbox {
-=======
-.todo-list_item:hover {
-  background-color: rgb(216, 216, 216);
-}
-
-.todo-list_checkbox {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   width: 20px;
   height: 20px;
   outline: none;
@@ -121,62 +81,38 @@ body {
   transition: all .2s ease;
 }
 
-<<<<<<< HEAD
 .todo-list-item__name {
-=======
-.todo-list_name {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   flex-grow: 1;
   padding-left: 30px;
   color: #8492ff;
   font-size: 18px;
 }
 
-<<<<<<< HEAD
 .todo-list-item__time {
-=======
-.todo-list_time {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   color: #d5daff;
 }
 
 /*footer*/
 
-<<<<<<< HEAD
 .footer-todo-list {
   width: 450px;
-=======
-.todo-list_footer {
-  width: 100%;
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
   background-color: #fff;
-=======
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   padding: 0px 30px;
   border-top: 1px solid rgb(218, 218, 218);
 }
 
-<<<<<<< HEAD
 .footer-todo-list__total {
-=======
-.todo-list_total {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
   color: #aeb6fd;
 }
 
-<<<<<<< HEAD
 .footer-todo-list__add-button {
-=======
-.todo-list_add-button {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   padding: 20px 20px 20px 20px;
   color: #697afd;
   text-transform: uppercase;
@@ -186,19 +122,11 @@ body {
   transition: all .3s ease-in-out;
 }
 
-<<<<<<< HEAD
 .footer-todo-list__add-button:hover, .footer-todo-list__add-button:hover:active {
   background-color: rgb(216, 216, 216);
 }
 
 .todo-list-item__name--completed {
-=======
-.todo-list_add-button:hover, .todo-list_add-button:hover:active, .todo-list_add-button:hover:focus {
-  background-color: rgb(216, 216, 216);
-}
-
-.todo-list_name--checked {
->>>>>>> 7df762d8dad9ea2647057763e41fd2cf69075fc4
   color: rgb(203, 209, 250);
   text-decoration: line-through;
 }
