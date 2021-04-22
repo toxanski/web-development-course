@@ -13,7 +13,6 @@
   "license": "ISC",
   "devDependencies": {
     "copyfiles": "^2.4.1",
-    "minify": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "uglifycss": "^0.0.29"
   },
