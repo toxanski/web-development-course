@@ -1,15 +1,15 @@
 {
   "name": "web-development-course",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "im sleeping...",
+  "main": "listing-store.js",
   "scripts": {
     "copy-html": "copyfiles index.html build",
     "minify-js": "uglifyjs listing-store.js -o build/listing-store.min.js",
     "minify-css": "uglifycss listing-store.css --output build/listing-store.min.css",
     "build": "npm-run-all copy-html minify-js minify-css"
   },
-  "author": "Smirnov Anton",
+  "author": "Anton Smirnov",
   "license": "ISC",
   "devDependencies": {
     "copyfiles": "^2.4.1",
