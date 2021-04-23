@@ -77,7 +77,7 @@ window.onload = function () {
   var addButton = document.querySelector('#add-button');
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked');
-    addToStoreElements(selectedOption.innerText);
+    !selectedOption ? console.log('zero items') : addToStoreElements(selectedOption.innerText);
     updateUI();
   }
 
@@ -85,7 +85,7 @@ window.onload = function () {
   const listingButton = document.querySelector('#add-listing');
   listingButton.addEventListener('click', () => {
     const selectedOption = document.querySelector('.store-select option:checked');
-    addToListingElements(selectedOption.innerText);
+    !selectedOption ? console.log('zero items') : addToListingElements(selectedOption.innerText);
     updateUI();
   });
 
@@ -93,7 +93,7 @@ window.onload = function () {
   const deleteButton = document.querySelector('#delete-button');
   deleteButton.addEventListener('click', () => {
     const selectedOption = document.querySelector('.select-block option:checked');
-    deleteElement(selectedOption);
+    !selectedOption ? console.log('Не выделен item') : deleteElement(selectedOption);
     updateUI();
   });
 
