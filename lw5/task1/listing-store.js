@@ -2,17 +2,17 @@ window.onload = function () {
 
   // состояние приложения: данные
   var listingElements = ['apple', 'orange'];
-	var storeElements = [];
+  var storeElements = [];
 
   // логика JS, не связана с DOM
   // данная функция работает только с состоянием
-	function addToStoreElements(element) {
-  	var elementPosition = listingElements.indexOf(element);
-	  if (elementPosition > -1) {
-  	  storeElements.push(element);
-    	listingElements.splice(elementPosition, 1);
-	  }
-	}
+  function addToStoreElements(element) {
+    var elementPosition = listingElements.indexOf(element);
+    if (elementPosition > -1) {
+      storeElements.push(element);
+      listingElements.splice(elementPosition, 1);
+    }
+  }
 
   function addToListingElements(element) {
     const elementPosition = storeElements.indexOf(element);
@@ -38,28 +38,28 @@ window.onload = function () {
     listingElements.push(elementName);
   }
 
-  function changeTotalElements (element) {
+  function changeTotalElements(element) {
     if (element.hasAttribute('listing-total')) {
       element.textContent = `Listing (${listingElements.length})`;
     } else if (element.hasAttribute('store-total')) {
       element.textContent = `Store (${storeElements.length})`;
     }
   }
- 
+
   // updateUI берет данные из массивов и вставляет в DOM
-	function updateUI() {
-	 	var storeSelect = document.querySelector('.store-select');
+  function updateUI() {
+    var storeSelect = document.querySelector('.store-select');
     var listingSelect = document.querySelector('.listing-select');
-		storeSelect.innerHTML = '';
-		listingSelect.innerHTML = '';
-    
+    storeSelect.innerHTML = '';
+    listingSelect.innerHTML = '';
+
     // вставка элементов из Listing
     for (var i = 0; i < listingElements.length; i++) {
       var newOption = document.createElement('option');
       newOption.innerText = listingElements[i];
       listingSelect.append(newOption);
     }
-    
+
     // вставка элементов из Store
     for (var i = 0; i < storeElements.length; i++) {
       var newOption = document.createElement('option');
@@ -71,23 +71,23 @@ window.onload = function () {
     const totalStore = document.querySelector('.total-store');
     changeTotalElements(totalListing);
     changeTotalElements(totalStore);
-	}//
+  } //
 
   // событие для кнопки "Add to store"
-	var addButton = document.querySelector('#add-button');
+  var addButton = document.querySelector('#add-button');
   addButton.onclick = function () {
     var selectedOption = document.querySelector('.listing-select option:checked');
     addToStoreElements(selectedOption.innerText);
     updateUI();
-	}
+  }
 
   // событие для кнопки "Add to listing"
-	const listingButton = document.querySelector('#add-listing');
+  const listingButton = document.querySelector('#add-listing');
   listingButton.addEventListener('click', () => {
     const selectedOption = document.querySelector('.store-select option:checked');
     addToListingElements(selectedOption.innerText);
     updateUI();
-	});
+  });
 
   //delete
   const deleteButton = document.querySelector('#delete-button');
@@ -103,7 +103,7 @@ window.onload = function () {
     addNewElements();
     updateUI();
   });
-  
+
   // запускаем начальное обновление интерфейса
   // для первоначального вывода данных из состояния в UI
   updateUI();
