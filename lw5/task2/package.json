@@ -5,8 +5,8 @@
   "main": "listing-store.js",
   "scripts": {
     "copy-html": "copyfiles index.html build",
-    "minify-js": "uglifyjs listing-store.js -o build/listing-store.min.js",
-    "minify-css": "uglifycss listing-store.css --output build/listing-store.min.css",
+    "minify-js": "uglifyjs listing-store.js -o build/listing-store.js",
+    "minify-css": "uglifycss listing-store.css --output build/listing-store.css",
     "build": "npm-run-all copy-html minify-js minify-css"
   },
   "author": "Anton Smirnov",

@@ -33,19 +33,10 @@ window.onload = function () {
     }
   }
 
-  function addNewElements() {
-    const elementName = prompt('Введите название элемента');
-    listingElements.push(elementName);
+  function addNewElements(element) {
+    listingElements.push(element);
   }
-
-  function changeTotalElements(element) {
-    if (element.hasAttribute('listing-total')) {
-      element.textContent = `Listing (${listingElements.length})`;
-    } else if (element.hasAttribute('store-total')) {
-      element.textContent = `Store (${storeElements.length})`;
-    }
-  }
-
+  
   // updateUI берет данные из массивов и вставляет в DOM
   function updateUI() {
     var storeSelect = document.querySelector('.store-select');
@@ -67,8 +58,8 @@ window.onload = function () {
       storeSelect.append(newOption);
     }
 
-    const totalListing = document.querySelector('.total-listing');
-    const totalStore = document.querySelector('.total-store');
+    const totalListing = document.querySelector('.count-listing');
+    const totalStore = document.querySelector('.count-store');
     changeTotalElements(totalListing);
     changeTotalElements(totalStore);
   } //
@@ -97,10 +88,20 @@ window.onload = function () {
     updateUI();
   });
 
+  //total elements
+  function changeTotalElements(element) {
+    if (element.classList.contains('count-listing')) {
+      element.textContent = listingElements.length;
+    } else if (element.classList.contains('count-store')) {
+      element.textContent = storeElements.length;
+    }
+  }
+
   //new el
   const newElementButton = document.querySelector('#add-element-button');
   newElementButton.addEventListener('click', () => {
-    addNewElements();
+    const elementName = prompt('Введите название элемента');
+    addNewElements(elementName);
     updateUI();
   });
 
