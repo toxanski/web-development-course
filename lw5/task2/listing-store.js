@@ -36,7 +36,7 @@ window.onload = function () {
   function addNewElements(element) {
     listingElements.push(element);
   }
-  
+
   // updateUI берет данные из массивов и вставляет в DOM
   function updateUI() {
     var storeSelect = document.querySelector('.store-select');
