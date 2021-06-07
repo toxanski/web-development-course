@@ -1,0 +1,32 @@
+{
+  "name": "lw6_task1",
+  "version": "1.0.0",
+  "description": "i want 100",
+  "main": "todo-app.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.5",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss": "^8.3.0",
+    "postcss-loader": "^5.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ]
+}
