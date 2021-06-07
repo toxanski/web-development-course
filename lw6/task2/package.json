@@ -4,10 +4,10 @@
   "description": "i want 100",
   "main": "todo-app.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
+    "dev": "webpack",
+    "dev-watch": "webpack --watch",
     "test": "jest",
-    "start": "npm-run-all test build"
+    "build": "npm-run-all test dev"
   },
   "keywords": [],
   "author": "",
