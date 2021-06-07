@@ -41,7 +41,7 @@ module.exports = {
                   [
                     "postcss-preset-env",
                     { 
-                      config: path.resolve(__dirname, "./src/postcss.config.js")
+                      config: path.resolve(__dirname, "./postcss.config.js")
                     },
                   ],
                 ],
